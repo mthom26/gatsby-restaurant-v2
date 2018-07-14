@@ -1,0 +1,13 @@
+.jumbo {
+  position: relative;
+  max-height: 35vh;
+  overflow: hidden;
+}
+
+.content {
+  position: absolute;
+  z-index: 100;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+}

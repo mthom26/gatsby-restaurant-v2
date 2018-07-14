@@ -7,6 +7,8 @@ import AwardWinning from '../components/landing/AwardWinning';
 import OpeningTimes from '../components/landing/OpeningTimes';
 import LocalFlavours from '../components/landing/LocalFlavours';
 import FoodAndDrink from '../components/landing/FoodAndDrink';
+import Events from '../components/Events';
+import ContactAndMap from '../components/ContactAndMap';
 
 const Index = ({ data }) => {
   const {
@@ -14,16 +16,19 @@ const Index = ({ data }) => {
     openingTimesImage,
     localFlavourImage,
     foodImage,
-    drinkImage
+    drinkImage,
+    eventsImage
   } = data;
 
   return (
     <div>
-      <Landing data={landingImage}/>
+      <Landing data={landingImage} />
       <AwardWinning />
-      <OpeningTimes data={openingTimesImage}/>
-      <LocalFlavours data={localFlavourImage}/>
-      <FoodAndDrink foodImage={foodImage} drinkImage={drinkImage}/>
+      <OpeningTimes data={openingTimesImage} />
+      <LocalFlavours data={localFlavourImage} />
+      <FoodAndDrink foodImage={foodImage} drinkImage={drinkImage} />
+      <Events data={eventsImage} />
+      <ContactAndMap />
     </div>
   );
 };
@@ -61,6 +66,13 @@ export const query = graphql`
     drinkImage: file(relativePath: { eq: "images/drink.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 1000) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    eventsImage: file(relativePath: { eq: "images/eventsImage.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 1920) {
           ...GatsbyImageSharpSizes
         }
       }

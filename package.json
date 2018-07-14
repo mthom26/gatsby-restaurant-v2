@@ -9,12 +9,14 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.2",
+    "dotenv": "^6.0.0",
     "gatsby": "^1.9.250",
     "gatsby-image": "^1.0.54",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-sharp": "^1.6.48",
     "gatsby-source-filesystem": "^1.5.39",
     "gatsby-transformer-sharp": "^1.6.27",
+    "react-google-maps": "^9.4.5",
     "reactstrap": "^6.3.0"
   }
 }
