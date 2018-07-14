@@ -10,7 +10,7 @@ const Footer = () => {
     <Container className="text-light text-center bg-dark" fluid>
       <Row>
         <Col md={4}>
-          <p>Contact</p>
+          
         </Col>
         <Col md={4}>
           <p>LOGO</p>
