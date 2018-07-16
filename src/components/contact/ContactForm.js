@@ -4,7 +4,8 @@ import {
   Form,
   FormGroup,
   Label,
-  Input
+  Input,
+  Button
 } from 'reactstrap';
 
 import styles from './ContactForm.module.css';
@@ -29,6 +30,7 @@ const ContactForm = ({ data }) => {
               <Label for="message">Message</Label>
               <Input type="textarea" name="message" id="message" />
             </FormGroup>
+            <Button className="mt-5" color="primary" size="lg" block>Submit</Button>
           </Form>
         </div>
       </div>

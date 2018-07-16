@@ -19,6 +19,10 @@
 }
 
 @media (max-width: 800px) {
+  .contactForm {
+    height: 90vh;
+  }
+
   .formContainer {
     width: 100%;
   }
