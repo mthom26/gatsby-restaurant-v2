@@ -12,6 +12,12 @@ import {
   Col
 } from 'reactstrap';
 
+import styles from './ContactAndMAp.module.css';
+
+import emailIcon from '../images/email_black.svg';
+import addressIcon from '../images/address_black.svg';
+import phoneIcon from '../images/phone_black.svg';
+
 // view docs here https://tomchentw.github.io/react-google-maps/ 
 const MyMapComponent = withScriptjs(withGoogleMap(() => {
   return (
@@ -27,13 +33,24 @@ const MyMapComponent = withScriptjs(withGoogleMap(() => {
 const ContactAndMap = () => {
   return (
     <Container fluid>
-      <Row>
+      <Row className="align-items-center text-center my-5">
         <Col md={6}>
           <h3>Contact Us</h3>
-          <hr />
-          <p>Address</p>
-          <p>Email Address</p>
-          <p>Phone Number</p>
+          <hr className="bg-primary w-50"/>
+          <div className={styles.details}>
+            <div className="my-4">
+              <img src={addressIcon} width="24px" />
+              <p className="d-inline ml-4">Address</p>
+            </div>
+            <div className="mb-4">
+              <img src={emailIcon} width="24px" />
+              <p className="d-inline ml-4">Email Address</p>
+            </div>
+            <div className="mb-4">
+              <img src={phoneIcon} width="24px" />
+              <p className="d-inline ml-4">Phone Number</p>
+            </div>
+          </div>
         </Col>
         <Col md={6}>
           <MyMapComponent
