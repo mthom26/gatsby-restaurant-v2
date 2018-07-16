@@ -17,7 +17,7 @@ const ContactForm = ({ data }) => {
         <div className={`d-flex flex-column justify-content-center align-items-center ${styles.formContainer} text-light`}>
           <h2 className="text-center">Get In Touch</h2>
           <hr className="bg-primary w-75"/>
-          <Form className="w-75">
+          <Form action={`https://formspree.io/${process.env.FORMSPREE_EMAIL}`} method="POST" className="w-75">
             <FormGroup>
               <Label for="name">Name</Label>
               <Input type="text" name="name" id="name" />
@@ -30,6 +30,7 @@ const ContactForm = ({ data }) => {
               <Label for="message">Message</Label>
               <Input type="textarea" name="message" id="message" />
             </FormGroup>
+            <Input type="text" name="_gotcha" style={{ display: 'none' }}/>
             <Button className="mt-5" color="primary" size="lg" block>Submit</Button>
           </Form>
         </div>
