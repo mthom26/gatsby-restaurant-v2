@@ -15,7 +15,7 @@ const Food = ({ data }) => {
   } = data;
 
   return (
-    <div>
+    <div id="top">
       <Header data={foodImage} />
       <Menu
         starters={starters}

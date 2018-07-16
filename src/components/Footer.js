@@ -4,6 +4,7 @@ import {
   Row,
   Col
 } from 'reactstrap';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import styles from './Footer.module.css';
 
@@ -19,7 +20,7 @@ const Footer = () => {
           
         </Col>
         <Col className="py-3" md={4}>
-          <img src={logo} width="48px"/>
+          <AnchorLink href="#top"><img src={logo} width="48px"/></AnchorLink>
         </Col>
         <Col className="py-3" md={4}>
           <a className={`${styles.socialButton} mx-4`} href="#">

@@ -7,7 +7,7 @@ const Contact = ({ data }) => {
   const { contactImage } = data;
 
   return (
-    <div>
+    <div id="top">
       <ContactForm data={contactImage} />
       <ContactAndMap />
     </div>

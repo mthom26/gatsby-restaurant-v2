@@ -9,7 +9,7 @@ const Drinks = ({ data }) => {
   const { mainImage, eventsImage, drinksImage } = data;
 
   return (
-    <div>
+    <div id="top">
       <Header data={mainImage} />
       <Menu data={drinksImage}/>
       <Events data={eventsImage} />

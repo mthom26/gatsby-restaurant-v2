@@ -21,7 +21,7 @@ const Index = ({ data }) => {
   } = data;
 
   return (
-    <div>
+    <div id="top">
       <Landing data={landingImage} />
       <AwardWinning />
       <OpeningTimes data={openingTimesImage} />

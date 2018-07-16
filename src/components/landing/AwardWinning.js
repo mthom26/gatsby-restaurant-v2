@@ -9,7 +9,7 @@ import styles from './AwardWinning.module.css';
 
 const AwardWinning = () => {
   return (
-    <Container>
+    <Container id="next">
       <Row>
         <Col className="py-5">
           <h2>Award Winning Food & Service</h2>
