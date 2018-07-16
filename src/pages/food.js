@@ -2,13 +2,16 @@ import React from 'react';
 
 import Header from '../components/food/Header';
 import Menu from '../components/food/Menu';
+import Events from '../components/Events';
+import ContactAndMap from '../components/ContactAndMap';
 
 const Food = ({ data }) => {
   const {
     foodImage,
     starters,
     mains,
-    desserts
+    desserts,
+    eventsImage
   } = data;
 
   return (
@@ -19,6 +22,8 @@ const Food = ({ data }) => {
         mains={mains}
         desserts={desserts}
       />
+      <Events data={eventsImage} />
+      <ContactAndMap />
     </div>
   );
 };
@@ -49,6 +54,13 @@ export const query = graphql`
     desserts: file(relativePath: { eq: "images/desserts.png" }) {
       childImageSharp {
         sizes(maxWidth: 1000) {
+          ...GatsbyImageSharpSizes
+        }
+      }
+    }
+    eventsImage: file(relativePath: { eq: "images/eventsImage.jpg" }) {
+      childImageSharp {
+        sizes(maxWidth: 1920) {
           ...GatsbyImageSharpSizes
         }
       }
