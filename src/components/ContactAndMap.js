@@ -33,8 +33,8 @@ const MyMapComponent = withScriptjs(withGoogleMap(() => {
 const ContactAndMap = () => {
   return (
     <Container fluid>
-      <Row className="align-items-center text-center my-5">
-        <Col md={6}>
+      <Row className="align-items-center text-center">
+        <Col md={6} className="my-5">
           <h3>Contact Us</h3>
           <hr className="bg-primary w-50"/>
           <div className={styles.details}>

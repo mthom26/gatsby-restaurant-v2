@@ -1,0 +1,8 @@
+.socialButton {
+  opacity: 0.7;
+  transition: opacity 250ms linear;
+}
+
+.socialButton:hover {
+  opacity: 1;
+}
