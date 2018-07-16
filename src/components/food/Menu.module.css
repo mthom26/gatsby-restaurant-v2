@@ -1,0 +1,9 @@
+@media (min-width: 800px) {
+  .itemone {
+    order: 1;
+  }
+
+  .itemtwo {
+    order: 0;
+  }
+}
