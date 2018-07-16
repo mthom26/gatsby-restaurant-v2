@@ -52,7 +52,7 @@ const ContactAndMap = () => {
             </div>
           </div>
         </Col>
-        <Col md={6}>
+        <Col md={6} className="px-0">
           <MyMapComponent
             googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.GATSBY_GOOGLE_MAP_KEY}&v=3.exp&libraries=geometry,drawing,places`}
             loadingElement={<div style={{ height: `100%` }} />}
