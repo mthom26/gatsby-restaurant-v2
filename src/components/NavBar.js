@@ -30,7 +30,7 @@ class NavBar extends React.Component {
     const { isOpen } = this.state;
 
     return (
-      <Navbar fixed="top" color="dark" dark expand="md">
+      <Navbar className="border-bottom border-primary" fixed="top" color="dark" dark expand="md">
         <NavbarBrand href="/"><img className="mr-3" src={logo} width="36px"/>Restaurant</NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={isOpen} navbar>

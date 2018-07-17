@@ -14,8 +14,8 @@ const Landing = ({ data }) => {
   return (
     <div className={styles.landing}>
       <div className={`${styles.landingContent} text-light`}>
-        <img src={logo} width="128px" />
-        <h1 className="display-1">Landing</h1>
+        <img src={logo} className={styles.logo} />
+        <h1 className="display-2">Landing</h1>
         <hr className="bg-light w-25" />
         <div className="my-4">
           <img src={addressIcon} width="24px" />
@@ -29,7 +29,9 @@ const Landing = ({ data }) => {
           <img src={phoneIcon} width="24px" />
           <p className="d-inline ml-4">Phone Number</p>
         </div>
-        <AnchorLink href="#next"><img src={arrow} /></AnchorLink>
+        <AnchorLink className={styles.scrollDown} offset={63} href="#next">
+          <img src={arrow} width="40px" />
+        </AnchorLink>
       </div>
       <Img
         outerWrapperClassName="h-100"
