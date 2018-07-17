@@ -15,7 +15,7 @@ const Food = ({ data }) => {
   } = data;
 
   return (
-    <div id="top">
+    <div id="top" style={{ marginTop: '63px' }}>
       <Header data={foodImage} />
       <Menu
         starters={starters}

@@ -32,7 +32,6 @@ const Header = ({ data }) => {
       <Img
         sizes={data.childImageSharp.sizes}
         style={{
-          width: "100%",
           height: "100%"
         }}
       />

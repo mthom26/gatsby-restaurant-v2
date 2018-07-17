@@ -9,7 +9,7 @@ const Drinks = ({ data }) => {
   const { mainImage, eventsImage, drinksImage } = data;
 
   return (
-    <div id="top">
+    <div id="top" style={{ marginTop: '63px' }}>
       <Header data={mainImage} />
       <Menu data={drinksImage}/>
       <Events data={eventsImage} />

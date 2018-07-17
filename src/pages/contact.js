@@ -7,7 +7,7 @@ const Contact = ({ data }) => {
   const { contactImage } = data;
 
   return (
-    <div id="top">
+    <div id="top" style={{ marginTop: '63px' }}>
       <ContactForm data={contactImage} />
       <ContactAndMap />
     </div>
