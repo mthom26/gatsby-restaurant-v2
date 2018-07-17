@@ -1,6 +1,6 @@
 import React from 'react';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../custom.scss';
 
 import Landing from '../components/landing/Landing';
 import AwardWinning from '../components/landing/AwardWinning';

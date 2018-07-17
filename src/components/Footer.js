@@ -16,13 +16,13 @@ const Footer = () => {
   return (
     <Container className="text-light text-center bg-dark" fluid>
       <Row>
-        <Col className="py-3" md={4}>
+        <Col md={4}>
           
         </Col>
         <Col className="py-3" md={4}>
           <AnchorLink href="#top"><img src={logo} width="48px"/></AnchorLink>
         </Col>
-        <Col className="py-3" md={4}>
+        <Col className="py-3 d-flex justify-content-center align-items-center" md={4}>
           <a className={`${styles.socialButton} mx-4`} href="#">
             <img src={facebookIcon} />
           </a>
