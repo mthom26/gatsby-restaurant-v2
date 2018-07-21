@@ -29,7 +29,7 @@
   width: 128px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .scrollDown {
     bottom: 10px;
   }

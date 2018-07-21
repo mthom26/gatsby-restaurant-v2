@@ -18,7 +18,7 @@
   width: 50%;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .contactForm {
     height: 90vh;
   }
