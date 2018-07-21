@@ -12,7 +12,7 @@ import {
   Col
 } from 'reactstrap';
 
-import styles from './ContactAndMAp.module.css';
+import styles from './ContactAndMap.module.css';
 
 import emailIcon from '../images/email_black.svg';
 import addressIcon from '../images/address_black.svg';
