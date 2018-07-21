@@ -17,7 +17,7 @@ const ContactForm = ({ data }) => {
         <div className={`d-flex flex-column justify-content-center align-items-center ${styles.formContainer} text-light`}>
           <h2 className="text-center">Get In Touch</h2>
           <hr className="bg-primary w-75"/>
-          <Form action={`https://formspree.io/${process.env.FORMSPREE_EMAIL}`} method="POST" className="w-75">
+          <Form action={`https://formspree.io/${process.env.GATSBY_FORMSPREE_EMAIL}`} method="POST" className="w-75">
             <FormGroup>
               <Label for="name">Name</Label>
               <Input type="text" name="name" id="name" />
