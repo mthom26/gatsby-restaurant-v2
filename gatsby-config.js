@@ -18,6 +18,15 @@ module.exports = {
       options: {
         precision: 8
       }
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: `${process.env.GATSBY_TRACKING_ID}`,
+        head: false,
+        anonymize: false,
+        respectDNT: false
+      }
     }
   ]
 };
