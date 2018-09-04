@@ -20,14 +20,17 @@ const Footer = () => {
           
         </Col>
         <Col className="py-3" md={4}>
-          <AnchorLink href="#top"><img src={logo} width="48px"/></AnchorLink>
+          <AnchorLink href="#top">
+            <img src={logo} width="48px"/>
+            <p className={styles.fancyText}>Good Eating</p>
+          </AnchorLink>
         </Col>
-        <Col className="py-3 d-flex justify-content-center align-items-center" md={4}>
+        <Col className="pb-3 d-flex justify-content-center align-items-center" md={4}>
           <a className={`${styles.socialButton} mx-4`} href="#">
-            <img src={facebookIcon} />
+            <img src={facebookIcon} width="26px" />
           </a>
           <a className={`${styles.socialButton} mx-4`} href="#">
-            <img src={twitterIcon} />
+            <img src={twitterIcon} width="26px" />
           </a>
         </Col>
       </Row>

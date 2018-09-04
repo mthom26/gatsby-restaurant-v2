@@ -6,3 +6,16 @@
 .socialButton:hover {
   opacity: 1;
 }
+
+.fancyText {
+  font-family: 'Satisfy';
+  font-size: 1.8rem;
+  color: #f8f9fa;
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+}
+
+.fancyText:hover {
+  text-decoration: none !important; 
+  text-decoration-color: rgba(0,0,0,0);
+}

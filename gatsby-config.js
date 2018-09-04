@@ -27,6 +27,14 @@ module.exports = {
         anonymize: false,
         respectDNT: false
       }
+    },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'satisfy'
+        ]
+      }
     }
   ]
 };

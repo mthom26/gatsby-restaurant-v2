@@ -11,6 +11,7 @@ import {
 
 import logo from '../images/logogradient.svg';
 
+import styles from './NavBar.module.css';
 // ToDo: Add padding 56px to the top of the body to push content down
 
 class NavBar extends React.Component {
@@ -31,7 +32,14 @@ class NavBar extends React.Component {
 
     return (
       <Navbar className="border-bottom border-primary" fixed="top" color="dark" dark expand="md">
-        <NavbarBrand href="/"><img className="mr-3" src={logo} width="36px"/>Restaurant</NavbarBrand>
+        <NavbarBrand href="/" className={styles.fancyText}>
+          <img
+            className="mr-3"
+            src={logo}
+            width="36px"
+          />
+          Good Eating
+        </NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
