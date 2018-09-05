@@ -8,6 +8,7 @@ import {
   Button,
   UncontrolledAlert
 } from 'reactstrap';
+import Spinner from 'react-spinkit';
 
 import styles from './ContactForm.module.css';
 
@@ -18,7 +19,8 @@ const INITIAL_STATE = {
     message: ''
   },
   formSuccess: false,
-  formFailure: false
+  formFailure: false,
+  loading: false
 };
 
 class ContactForm extends React.Component {
@@ -39,23 +41,32 @@ class ContactForm extends React.Component {
   }
 
   onSubmit = () => {
+    this.setState({ loading: true });
     return fetch(process.env.GATSBY_AWS_CONTACTFORM, {
       method: "POST",
       body: JSON.stringify(this.state.formData)
     })
       .then(response => {
         console.log(response);
-        this.setState({ ...INITIAL_STATE, formSuccess: true });
+        this.setState({
+          ...INITIAL_STATE, 
+          formSuccess: true,
+          loading: false
+        });
       })
       .catch(err => {
         console.log(err);
-        this.setState({ ...INITIAL_STATE, formFailure: true });
+        this.setState({
+          ...INITIAL_STATE,
+          formFailure: true,
+          loading: false
+        });
       });
   }
 
   render() {
     const { name, email, message } = this.state.formData;
-    const { formSuccess, formFailure } = this.state;
+    const { formSuccess, formFailure, loading } = this.state;
     const { data } = this.props;
 
     return (
@@ -78,7 +89,22 @@ class ContactForm extends React.Component {
                 <Input onChange={this.onUpdateState} value={message} type="textarea" name="message" id="message" />
               </FormGroup>
               <Input type="text" name="_gotcha" style={{ display: 'none' }}/>
-              <Button onClick={this.onSubmit} className="mt-5" color="primary" size="lg" block>Submit</Button>
+              <Button
+                onClick={this.onSubmit}
+                className={`mt-5 ${styles.button}`}
+                color="primary"
+                size="lg" block
+              >
+                <span>Submit</span>
+                {loading ?
+                  (<Spinner
+                    className={styles.spinner}
+                    name="circle" color="white"
+                    fadeIn={0}
+                  />)
+                  : <div />
+                }
+              </Button>
             </Form>
             {formSuccess && (
               <UncontrolledAlert color="success">

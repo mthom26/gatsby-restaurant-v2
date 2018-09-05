@@ -18,6 +18,17 @@
   width: 50%;
 }
 
+.button {
+  display: flex !important;
+  justify-content: center;
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+}
+
 @media (max-width: 768px) {
   .contactForm {
     height: 90vh;
